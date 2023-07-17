@@ -24,7 +24,7 @@ export const Navbar = styled("nav", {
 
 export const LogoTipo = styled(Flex, {
   alignItems: "center",
-  justifyContent: "center"
+  justifyContent: "center",
 });
 
 export const LogoTipoText = styled("span", {
@@ -34,7 +34,7 @@ export const LogoTipoText = styled("span", {
   fontFamily: '"IBM Plex Sans"',
   "@mobile": {
     fontSize: "1rem",
-  },
+  }
 });
 
 export const NavbarLinks = styled(Flex, {

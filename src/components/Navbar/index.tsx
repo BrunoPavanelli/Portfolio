@@ -12,7 +12,7 @@ import {
 
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { Flag, Segment } from "semantic-ui-react";
+import { Flag } from "semantic-ui-react";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
 
@@ -44,7 +44,7 @@ export const NavBar = (): JSX.Element => {
         <NavbarMobileArea>
           <LogoTipo>
             <LogoTipoText>{userData.nameUser}</LogoTipoText>
-              <div onClick={changeLanguage}>
+              <div onClick={changeLanguage} className="$svg">
                 {language === ptBr 
                   ? <Flag name="br" />
                   : <Flag name="us" />

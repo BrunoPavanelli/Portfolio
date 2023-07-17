@@ -78,6 +78,7 @@ export const globalStyles = globalCss({
     scrollBehavior: "smooth",
   },
   a: { textDecoration: "none" },
+  i: { cursor: "pointer" }
 });
 
 export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {

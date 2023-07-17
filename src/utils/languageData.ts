@@ -52,7 +52,7 @@ export const ptBr: ILanguage = {
     contactPresentation: {
         first_piece: "Entre em contato comigo!",
         second_piece: "Vamos nos falar, assim consigo ",
-        third_piece: "entender melhor suas necessiade ",
+        third_piece: "entender melhor suas necessiades ",
         fourth_piece: ", e assim chegarmos em ",
         fifth_piece: "soluções juntos!"
     },

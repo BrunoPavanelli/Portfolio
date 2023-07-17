@@ -18,6 +18,7 @@ export const Button = styled("button", {
   alignItems: "center",
   width: "max-content",
   whiteSpace: "nowrap",
+  transition: "ease-in-out 0.25s",
 
   variants: {
     type: {

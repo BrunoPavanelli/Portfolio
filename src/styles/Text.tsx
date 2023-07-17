@@ -13,6 +13,7 @@ export const Text = styled("p", {
     color: "$grey1",
     fontSize: "$text1",
     fontWeight: 400,
+    transition: "ease-in-out 0.25s",
     variants: {
         type: {
             heading1: {

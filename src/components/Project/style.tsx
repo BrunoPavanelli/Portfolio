@@ -29,9 +29,11 @@ export const ProjectLink = styled("a", {
   display: "flex",
   alignItems: "center",
   lineHeight: "0",
+  transition: "ease-in-out 0.25s",
 
   "&:hover": {
     color: "$grey5",
+    
   },
 
   [`& svg`]: {

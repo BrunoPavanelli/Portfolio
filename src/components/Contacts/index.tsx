@@ -116,7 +116,7 @@ export const Contacts = () => {
                   target="_blank"
                   href={linkedInUrl}
                 >
-                  {language.emailButton}
+                  {language.linkedinButton}
                 </Text>
               </ContactCardContent>
             </ContactCard>

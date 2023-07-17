@@ -26,15 +26,24 @@ export const Project = (): JSX.Element => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
+      const dataRepos = await fetch(
+        `https://api.github.com/users/${userData.githubUser}/repos?sort=created`
       );
 
-      const json = await data.json();
+      const dataCosmosSearch = await fetch(
+        `https://api.github.com/orgs/CosmosSearch-Grupo-4-Kenzie-Academy-M3/repos`
+      )
 
-      setRepositories(json);
+      const dataBiblioteka = await fetch(
+        `https://api.github.com/orgs/m5-t15-g23/repos`
+      )
+      const jsonRepos = await dataRepos.json();
+      const jsonCosmosSearch = await dataCosmosSearch.json(); 
+      const jsonBiblioteka = await dataBiblioteka.json();
 
-      return json;
+      setRepositories([...jsonRepos, jsonCosmosSearch[0], ...jsonBiblioteka]);
+
+      return jsonRepos;
     };
 
     fetchData();

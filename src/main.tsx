@@ -4,13 +4,17 @@ import { GlobalStyle } from "@/styles/Global";
 import { Home } from "@/pages/home";
 import { NavBar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "./providers/LanguageProvider";
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <GlobalStyle>
-      <NavBar />
-      <Home />
-      <Footer />
+      <LanguageProvider>
+        <NavBar />
+        <Home />
+        <Footer />
+      </LanguageProvider>
     </GlobalStyle>
   </React.StrictMode>
 );

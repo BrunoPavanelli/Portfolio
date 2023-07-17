@@ -31,10 +31,10 @@ export const Project = (): JSX.Element => {
       );
       const dataCosmosSearch = await fetch(
         `https://api.github.com/orgs/CosmosSearch-Grupo-4-Kenzie-Academy-M3/repos`
-        )
+      )
       const dataBiblioteka = await fetch(
         `https://api.github.com/orgs/m5-t15-g23/repos`
-        )
+      )
           
       const jsonRepos = await dataRepos.json();
       const jsonCosmosSearch = await dataCosmosSearch.json(); 

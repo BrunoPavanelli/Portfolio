@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
 
@@ -12,8 +12,13 @@ import {
 
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { Flag, Segment } from "semantic-ui-react";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
+
+import { LanguageContext } from "../../providers/LanguageProvider";
+import { ptBr } from "@/utils/languageData";
+
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -27,6 +32,7 @@ export const NavBar = (): JSX.Element => {
   document.title = userData.nameUser;
 
   const [open, setOpen] = useState(false);
+  const { changeLanguage, language } = useContext(LanguageContext)
 
   const OpenMenu = () => {
     setOpen(!open);
@@ -38,6 +44,12 @@ export const NavBar = (): JSX.Element => {
         <NavbarMobileArea>
           <LogoTipo>
             <LogoTipoText>{userData.nameUser}</LogoTipoText>
+              <div onClick={changeLanguage}>
+                {language === ptBr 
+                  ? <Flag name="br" />
+                  : <Flag name="us" />
+                }
+              </div>
           </LogoTipo>
           {isWide && (
             <Button
@@ -58,19 +70,20 @@ export const NavBar = (): JSX.Element => {
 };
 
 export const NavLinks = (): JSX.Element => {
+  const { language } = useContext(LanguageContext)
   return (
     <NavbarLinks>
       <Button type="btLink" as="a" color="grey4" href={`#home`}>
         Home
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
+        {language.projects}
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
+        {language.contact}
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
-        Social Media
+        {language.socialMedia}
       </Button>
     </NavbarLinks>
   );

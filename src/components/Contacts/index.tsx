@@ -30,12 +30,18 @@ export const Contacts = () => {
         <ContactSectionContent ref={ref}>
           <motion.div style={{ scale }}>
             <ContactSectionText>
+              <Text as="span" type="heading2" color="brand1">
+                Reach me!
+              </Text>
               <Text type="heading2" color="grey4">
-                Reach me! Let's talk and{" "}
+                Let's talk so i can have a {" "}
                 <Text as="span" type="heading2" color="brand1">
-                  develop solutions for your company
+                better understanding of your needs
                 </Text>
-                , together!
+                , and come up with {" "}
+                <Text as="span" type="heading2" color="brand1">
+                  solutions together!
+                </Text>
               </Text>
             </ContactSectionText>
           </motion.div>

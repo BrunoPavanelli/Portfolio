@@ -31,7 +31,7 @@ export const Contacts = () => {
           <motion.div style={{ scale }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
-                Let's talk and{" "}
+                Reach me! Let's talk and{" "}
                 <Text as="span" type="heading2" color="brand1">
                   develop solutions for your company
                 </Text>

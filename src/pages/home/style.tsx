@@ -5,15 +5,16 @@ import { css } from "@stitches/react";
 
 import meIlustration from "@/public/static/img/background/me-ilustration.svg";
 import backgroundImg from "@/public/static/img/background/header-bg.svg";
+import network from "@/public/static/img/background/network.png"
 
 import dots from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
   backgroundColor: "$grey1",
   padding: "12rem 0 8rem 0",
-  backgroundImage: `url(${backgroundImg})`,
+  backgroundImage: `url(${network})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
+  backgroundPosition: "left",
   backgroundAttachment: "fixed",
   borderBottom: "2px solid $grey5",
   "@tablet": {

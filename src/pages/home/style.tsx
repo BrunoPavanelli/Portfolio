@@ -11,11 +11,12 @@ export const Header = styled("header", {
   padding: "12rem 0 8rem 0",
   backgroundImage: `url(${network})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "left",
+  backgroundSize: "cover",
+  backgroundPosition: "rigth",
   backgroundAttachment: "fixed",
   borderBottom: "2px solid $brand1",
   "@tablet": {
-    backgroundPosition: "right -10% center",
+    backgroundPosition: "left",
   },
   "@mobile": {
     padding: "9rem 0 6rem 0",

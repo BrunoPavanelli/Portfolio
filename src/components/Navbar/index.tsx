@@ -85,7 +85,11 @@ export const NavLinks = (): JSX.Element => {
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         {language.socialMedia}
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`https://docs.google.com/document/d/1OwE_rxm7shMHHPiTcC6Si_ixsAf-PP4kTxqMhQVbPpM/edit#heading=h.srdd0eutwlge`}>
+      <Button type="btLink" as="a" target="_blank" color="grey4" href={
+        language.resume === "Resume" 
+        ? `https://docs.google.com/document/d/1cNS3GR67wwoX_oI6agEboMdQJkcXzhMwZf1oqJaUcLA/edit?usp=sharing`
+        : `https://docs.google.com/document/d/1OwE_rxm7shMHHPiTcC6Si_ixsAf-PP4kTxqMhQVbPpM/edit#heading=h.srdd0eutwlge`
+      }>
         {language.resume}
       </Button>
     </NavbarLinks>

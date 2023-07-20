@@ -85,6 +85,9 @@ export const NavLinks = (): JSX.Element => {
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         {language.socialMedia}
       </Button>
+      <Button type="btLink" as="a" color="grey4" href={`https://docs.google.com/document/d/1OwE_rxm7shMHHPiTcC6Si_ixsAf-PP4kTxqMhQVbPpM/edit#heading=h.srdd0eutwlge`}>
+        {language.resume}
+      </Button>
     </NavbarLinks>
   );
 };

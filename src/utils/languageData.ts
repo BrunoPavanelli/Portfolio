@@ -11,8 +11,9 @@ interface presentation {
 export interface ILanguage {
     projects: string,
     contact: string,
-    socialMedia: string
-    greeting: string
+    socialMedia: string,
+    resume: string,
+    greeting: string,
     presentation: presentation,
     projectsPresentation: string,
     seeProjects: string,
@@ -37,6 +38,7 @@ export const ptBr: ILanguage = {
     projects: "Projetos",
     contact: "Contatos",
     socialMedia: "Mídia Social",
+    resume: "Currículo",
     greeting: `É um prazer te-lo aqui, meu nome é ${userData.nameUser}, desenvolvedor BackEnd`,
     presentation: {
         first_piece: "Tenho como ",
@@ -73,6 +75,7 @@ export const enUSA: ILanguage = {
     projects: "Projects",
     contact: "Contacts",
     socialMedia: "Social Media",
+    resume: "Resume",
     greeting: `Such a pleasure have you here, my name is ${userData.nameUser} and im a BackEnd Developer`,
     presentation: {
         first_piece: "My ",

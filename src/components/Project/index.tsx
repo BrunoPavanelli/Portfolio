@@ -39,7 +39,8 @@ export const Project = (): JSX.Element => {
       const jsonRepos = await dataRepos.json();
       const jsonCosmosSearch = await dataCosmosSearch.json(); 
       const jsonBiblioteka = await dataBiblioteka.json();
-      const jsonReposFilter = jsonRepos.filter((repo: ReposType) => repo.name !== "Portfolio")
+      const namesToExclude = ["BrunoPavanelli", "Portfolio"];
+      const jsonReposFilter = jsonRepos.filter((repo: ReposType) => !namesToExclude.includes(repo.name))
       
       setRepositories([...jsonReposFilter, jsonCosmosSearch[0], ...jsonBiblioteka]);
 

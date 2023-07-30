@@ -37,12 +37,18 @@ export const Project = (): JSX.Element => {
       )
           
       const jsonRepos = await dataRepos.json();
+
       const jsonCosmosSearch = await dataCosmosSearch.json(); 
+
       const jsonBiblioteka = await dataBiblioteka.json();
-      const namesToExclude = ["BrunoPavanelli", "Portfolio"];
+
+      const namesToExclude = ["BrunoPavanelli", "Portfolio", "APIMoveis"];
       const jsonReposFilter = jsonRepos.filter((repo: ReposType) => !namesToExclude.includes(repo.name))
       
-      setRepositories([...jsonReposFilter, jsonCosmosSearch[0], ...jsonBiblioteka]);
+      const namesCosmosSearchToExclude = ["CosmosSeach-FakeApi"];
+      const jsonCosmosSearchFilter = jsonCosmosSearch.filter((repo: ReposType) => !namesCosmosSearchToExclude.includes(repo.name))
+      
+      setRepositories([...jsonReposFilter, ...jsonCosmosSearchFilter, ...jsonBiblioteka]);
 
       return jsonRepos;
     };

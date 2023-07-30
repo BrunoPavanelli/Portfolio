@@ -1,4 +1,4 @@
-import { SiPostgresql, SiTypescript, SiDjango, SiExpress, SiNestjs, SiMysql, SiGit, SiStyledcomponents } from "react-icons/si";
+import { SiPostgresql, SiTypescript, SiDjango, SiExpress, SiNestjs, SiMysql, SiGit, SiStyledcomponents, SiPrisma } from "react-icons/si";
 import { FaGit, FaPython } from "react-icons/fa";
 import {
   FaDocker,
@@ -16,6 +16,7 @@ export const stackData = [
   { title: "Node JS", img: FaNode },
   { title: "Express.js", img: SiExpress },
   { title: "NestJs", img: SiNestjs},
+  { title: "Prisma", img: SiPrisma},
   { title: "MySQL", img: SiMysql },  
   { title: "PostgreSQL", img: SiPostgresql },
   { title: "Python", img: FaPython },
